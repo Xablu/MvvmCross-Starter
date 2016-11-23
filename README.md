@@ -1,1 +1,1 @@
-# MvvmCross-Starter
+# Basic Xamarin app with MvvmCross 
