@@ -4,7 +4,7 @@ namespace BasicApp.Core.ViewModels
 {
     public class MainViewModel : MvxViewModel
     {
-        private string _title = "Hello MainViewModel";
+        private string _title = "Hello MainView!";
         public string Title
         {
             get { return _title; }

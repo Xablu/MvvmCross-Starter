@@ -1,11 +1,12 @@
+using BasicApp.Core.ViewModels;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
 
 namespace BasicApp.iOS.Views
 {
-    public partial class LoginView : MvxViewController
+    public partial class LoginView : MvxViewController<LoginViewModel>
     {
-        public LoginView() : base("FirstView", null)
+        public LoginView() : base("LoginView", null)
         {
         }
 
@@ -13,9 +14,10 @@ namespace BasicApp.iOS.Views
         {
             base.ViewDidLoad();
 
-            var set = this.CreateBindingSet<LoginView, Core.ViewModels.LoginViewModel>();
-            //set.Bind(Label).To(vm => vm.Hello);
-            //set.Bind(TextField).To(vm => vm.Hello);
+            var set = this.CreateBindingSet<LoginView, LoginViewModel>();
+            set.Bind(txtUsername).To(vm => vm.Username);
+            set.Bind(txtPassword).To(vm => vm.Password);
+            set.Bind(btnLogin).To(vm => vm.LoginCommand);
             set.Apply();
         }
     }
