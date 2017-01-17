@@ -13,9 +13,9 @@ namespace BasicApp.iOS.Views
         {
             base.ViewDidLoad();
 
-            var set = this.CreateBindingSet<LoginView, Core.ViewModels.FirstViewModel>();
-            set.Bind(Label).To(vm => vm.Hello);
-            set.Bind(TextField).To(vm => vm.Hello);
+            var set = this.CreateBindingSet<LoginView, Core.ViewModels.LoginViewModel>();
+            //set.Bind(Label).To(vm => vm.Hello);
+            //set.Bind(TextField).To(vm => vm.Hello);
             set.Apply();
         }
     }
