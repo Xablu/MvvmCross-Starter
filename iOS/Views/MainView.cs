@@ -16,7 +16,6 @@ namespace BasicApp.iOS.Views
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            lblHello.Text = "test";
             var set = this.CreateBindingSet<MainView, MainViewModel>();
             set.Bind(lblHello).To(vm => vm.Title);
             set.Apply();
