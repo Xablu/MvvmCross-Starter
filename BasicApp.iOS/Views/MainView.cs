@@ -12,7 +12,6 @@ namespace BasicApp.iOS.Views
         {
         }
 
-
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
