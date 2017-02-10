@@ -15,8 +15,12 @@ namespace BasicApp.iOS.Views
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+
+            this.NavigationItem.Title = "Binding power!";
+
             var set = this.CreateBindingSet<MainView, MainViewModel>();
             set.Bind(lblHello).To(vm => vm.Title);
+            set.Bind(txtHello).To(vm => vm.Title);
             set.Apply();
         }
     }

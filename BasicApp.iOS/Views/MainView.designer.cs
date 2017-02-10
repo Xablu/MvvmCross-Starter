@@ -14,12 +14,20 @@ namespace BasicApp.iOS.Views
 	{
 		[Outlet]
 		UIKit.UILabel lblHello { get; set; }
+
+		[Outlet]
+		UIKit.UITextField txtHello { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
 			if (lblHello != null) {
 				lblHello.Dispose ();
 				lblHello = null;
+			}
+
+			if (txtHello != null) {
+				txtHello.Dispose ();
+				txtHello = null;
 			}
 		}
 	}

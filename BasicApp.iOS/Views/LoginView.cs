@@ -14,6 +14,8 @@ namespace BasicApp.iOS.Views
         {
             base.ViewDidLoad();
 
+            this.NavigationItem.Title = "Login";
+
             var set = this.CreateBindingSet<LoginView, LoginViewModel>();
             set.Bind(txtUsername).To(vm => vm.Username);
             set.Bind(txtPassword).To(vm => vm.Password);
